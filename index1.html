@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Talking Rabbit - Fun Kids App</title>
+
+    <!-- ORIGINAL CSS FILE -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== WELCOME SCREEN ===== -->
+<div id="welcomeScreen">
+    <img src="tom_welcome.jpg" alt="Welcome" class="welcome-image">
+    <button class="play-button" id="enterBtn">
+        <span style="position: relative; z-index: 1;">▶ Play</span>
+    </button>
+</div>
+
+<!-- ===== MAIN APP SCREEN ===== -->
+<div id="mainScreen">
+    <div class="status-text" id="statusText">Ready</div>
+
+    <div class="video-container" id="videoContainer">
+        <video id="videoStanding" class="tom-video active" playsinline muted loop preload="auto">
+            <source src="tom_standing.mp4" type="video/mp4">
+        </video>
+        <video id="videoListening" class="tom-video" playsinline muted preload="auto">
+            <source src="tom_listening.mp4" type="video/mp4">
+        </video>
+        <video id="videoTalking" class="tom-video" playsinline muted preload="auto">
+            <source src="tom_talking.mp4" type="video/mp4">
+        </video>
+        <video id="videoLaughing" class="tom-video" playsinline muted preload="auto">
+            <source src="laughing.mp4" type="video/mp4">
+        </video>
+        <video id="videoMusic" class="tom-video" playsinline muted preload="auto">
+            <source src="music.mp4" type="video/mp4">
+        </video>
+
+        <div class="tap-zone tap-zone-head" id="tapHead"></div>
+        <div class="tap-zone tap-zone-body" id="tapBody"></div>
+        <div class="tap-zone tap-zone-feet" id="tapFeet"></div>
+    </div>
+
+    <div class="control-panel">
+        <button class="action-button btn-laughing" id="laughingBtn">😄</button>
+
+        <button class="action-button btn-mic" id="micBtn">
+            <div class="mic-button-base"></div>
+        </button>
+
+        <button class="action-button btn-music" id="musicBtn">🎵</button>
+    </div>
+</div>
+
+<!-- ===== EXIT CONFIRMATION DIALOG ===== -->
+<div class="exit-dialog" id="exitDialog">
+    <div class="exit-dialog-box">
+        <div class="exit-dialog-text">Do you want to exit?</div>
+        <div class="exit-dialog-buttons">
+            <button class="exit-btn exit-btn-yes" id="exitYesBtn">Yes</button>
+            <button class="exit-btn exit-btn-no" id="exitNoBtn">No</button>
+        </div>
+    </div>
+</div>
+
+<audio id="audioLaughing" src="laughing.wav" preload="auto"></audio>
+<audio id="audioMusic" src="music.wav" preload="auto"></audio>
+
+<!-- ORIGINAL JS FILE -->
+<script src="script.js"></script>
+
+</body>
+</html>
